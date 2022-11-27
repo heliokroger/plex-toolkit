@@ -1,0 +1,33 @@
+directories:
+  movies: ./Movies
+  shows: ./TV Shows
+
+open-subtitles:
+  api-key: XXXXXXXXXXX
+  login:
+    username: XXXXXXXXXXX
+    password: XXXXXXXXXXX
+  language: en-US
+
+tmdb:
+  api-key: XXXXXXXXXXX
+  language: en-US
+
+file-formatting:
+  movies:
+    folder: '{{title}} ({{releaseYear}}) {tmdb-{{tmdbId}}}'
+    file: '{{title}} ({{releaseYear}}){{ext}}'
+  shows:
+    folder: '{{showName}} ({{releaseYear}}) {tmdb-{{tmdbId}}}'
+    season: 'Season {{seasonNumber}}'
+    episode: '{{showName}} ({{releaseYear}}) - s{{seasonNumber}}e{{episodeNumber}} - {{episodeName}}{{ext}}'
+    multiple-episodes: '{{showName}} ({{releaseYear}}) - s{{seasonNumber}}e{{firstEpisode}}-e{{lastEpisode}}{{ext}}'
+  subtitles:
+    movie: '{{title}} ({{releaseYear}}).{{isoCode}}{{ext}}'
+    episode: '{{showName}} ({{releaseYear}}) - s{{seasonNumber}}e{{episodeNumber}} - {{episodeName}}.{{isoCode}}{{ext}}'
+
+ignore:
+  shows:
+    - XXXXXXX (XXXX)
+  movies:
+    - XXXXXXX (XXXX)
